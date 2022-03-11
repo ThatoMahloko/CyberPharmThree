@@ -4,6 +4,7 @@ import { Modal, Provider, Portal, Title } from 'react-native-paper'
 import { Badge } from 'react-native-elements'
 import signOut from '../auth/signOut'
 import { db, firebase } from '../config/firebase'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 import { useEffect } from 'react'
 
@@ -136,9 +137,9 @@ const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
         justifyContent: 'center',
-        width: 'auto',
-        height: 'auto',
-
+        flex:1,
+        height: hp('100%'),
+        width: wp('100%')
     }
     ,
     iconGroup: {

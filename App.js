@@ -31,6 +31,8 @@ import DonateBlood from './components/DonateBlood'
 import VaccineCertificate from './screens/VaccineCertificate';
 import LoadMap from './screens/LoadMap';
 
+
+
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -71,5 +73,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+   
   },
 });

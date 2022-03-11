@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
-
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const Facility = ({ navigation }) => {
     return (
@@ -27,59 +27,63 @@ export default Facility
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'white',
-        height: '100%'
+        height: '100%', // 70% of height device screen
+        width: '100%',  // 80% of width device screen
+        flex: 1,
+      
+        
     },
     icon: {
-        marginTop: 0,
-        width:'100%',
-        height: 300,
-        alignSelf: 'center'
+        width: '100%',
+        height: "52%",
+    
+        alignSelf: 'center',
+
     },
     heading: {
         fontSize: 35,
-        marginTop: 80,
+        marginTop: 10,
         textAlign: 'center',
         color: '#054EDE',
         fontWeight: 'bold',
     },
     text: {
-        marginTop: 50,
         textAlign: 'center',
         color: '#00A48F',
-        fontSize: 20
+        fontSize: 20,
     },
-   
-button:{
-    height:40,
-    width:100,
-   
-    backgroundColor:'#3E64FF',
-    borderRadius:20,
-    paddingLeft:10,
-    paddingTop:6,
-    color:'white',
-    marginTop:150,
-    marginRight:250,
-    justifyContent:'center',
-    
-},
+    button:{
+        height: 40,
+        width: 100,
+        backgroundColor: '#3E64FF',
+        borderRadius: 20,
+        color: 'white',
+        justifyContent: 'center',
+        
+    },
     btns: {
         flexDirection: 'row',
-    },
-    text2: {
-        color: 'white'
+        width:'100%',
+   
+     
+      
+        justifyContent: 'space-between',
+        height: '50%',
+        marginTop:'40%',
     },
     button2: {
-        height:40,
-        width:100,
-     
-        backgroundColor:'#3E64FF',
-        borderRadius:20,
-       padding:9,
-        color:'white',
-        marginTop:150,
-        right:"26%"
+        height: 40,
+        width: 100,
+        position: 'relative',
+        backgroundColor: '#3E64FF',
+        borderRadius: 20,
+        padding: 9,
+        color: 'white',
     },
+    text2: {
+        color: 'white',
+        textAlign:'center'
+
+    }
 })
 

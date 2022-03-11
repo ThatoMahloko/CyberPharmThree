@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, StatusBar, ImageBackground, TouchableOpacity, I
 import LogoIcon from '../components/LogoIcon'
 import signIn from '../auth/signIn'
 import { firebase } from '../config/firebase'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 const Login = ({ navigation }) => {
     const [userEmail, setUserEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -77,9 +78,10 @@ const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
         justifyContent: 'center',
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'white'
+        
+        backgroundColor: 'white',
+        height: hp('100%'),
+        width: wp('100%')
     },
     input: {
         width: 342,
@@ -103,6 +105,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignSelf: 'center',
         marginTop: 20
+        
     },
     text: {
         alignSelf: 'center',
